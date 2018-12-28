@@ -33,6 +33,7 @@ app.get('/savings', (req, res) => res.render('account', { account: accounts.savi
 app.get('/checking', (req, res) => res.render('account', { account: accounts.checking }) );
 app.get('/credit', (req, res) => res.render('account', { account: accounts.credit }) );
 
+
 app.get('/profile', (req, res) => res.render('profile', { user: users[0] }) );
 
 //Tworzenie serwera http
