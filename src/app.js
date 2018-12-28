@@ -9,8 +9,8 @@ const accountData = fs.readFileSync(path.join(__dirname, 'json', 'accounts.json'
 const accounts = JSON.parse(accountData);
 
 //users
-const usersData = fs.readFileSync(path.join(__dirname, 'json', 'users.json'), { encoding:'UTF8'});
-const users = JSON.parse(usersData);
+const userData = fs.readFileSync(path.join(__dirname, 'json', 'users.json'), { encoding:'UTF8'});
+const users = JSON.parse(userData);
 
 //set the views directory
 app.set('views', path.join(__dirname, 'views')); //__dirname jako element z node-a
@@ -32,7 +32,6 @@ app.get('/',
 app.get('/savings', (req, res) => res.render('account', { account: accounts.savings }) );
 app.get('/checking', (req, res) => res.render('account', { account: accounts.checking }) );
 app.get('/credit', (req, res) => res.render('account', { account: accounts.credit }) );
-
 
 app.get('/profile', (req, res) => res.render('profile', { user: users[0] }) );
 
