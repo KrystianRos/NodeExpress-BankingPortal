@@ -5,6 +5,12 @@
   <a href="/profile">Profile</a>
 </div>
 
+// <% for(account in accounts) {%>
+  <%- include('summary', { account: accounts.savings }) %>
+  <%- include('summary', { account: accounts.checking }) %>
+  <%- include('summary', { account: accounts.credit }) %>
+// <% } %>
+
 <br/>
 <a href="/transfer">Transfer</a>
 
